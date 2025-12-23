@@ -1,4 +1,6 @@
-const API = "https://todo-app-13bh.onrender.com/todos";
+const API = "https://todo-app-13bh.onrender.com";
+const todoRoutes = require("./routes/todoRoutes");
+const express = require("express");
 
 async function loadTodos() {
 	  const res = await fetch(API);
