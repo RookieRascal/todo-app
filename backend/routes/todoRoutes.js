@@ -24,6 +24,10 @@ const router = express.Router();
                    await Todo.findByIdAndDelete(req.params.id);
                      res.json({ message: "Todo deleted" });
                      });
-
+catch (error) {
+	    console.error(error);
+	    res.status(500).json({ error: "Failed to create todo" });
+	  }
+});
                      module.exports = router;
                      
